@@ -1,8 +1,9 @@
 @extends("layout")
 @section("content")
 <div class="container">
-                
-    <a href="articulos/create" class="btn btn-primary">CREAR</a>
+    @forelse ($datas as $data)
+
+    <a href="/add" class="btn btn-primary">CREAR</a>
 
     <table class="table table-dark table-striped mt-4">
         <thead>
@@ -17,21 +18,27 @@
         </thead>
         <tbody>    
             <tr>
-                <td>id</td>
-                <td>codigo</td>
-                <td>descripcion</td>
-                <td>cantidad</td>
-                <td>precio</td>
+                <th>{{ $data->id }}</th>
+                <td>{{ $data->codigo }}</td>
+                <td>{{ $data->descripcion }}</td>
+                <td>{{ $data->cantidad }}</td>
+                <td>{{ $data->precio }}</td>
+                <th scope="col">Acciones</th>
                 <td>
-                <form action="" method="POST">
-                <a href="" class="btn btn-info">Editar</a>         
-                 
-                <button type="submit" class="btn btn-danger">Delete</button>
-                
+                <form method="POST" action="{{ url("datas/{$data->id}") }}" >
+                <a href="{{ route ('datas.edit', ['id' => $data->id]) }}" class="btn btn-info">Editar</a>   
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Delete</button>                
                 </form>          
                 </td>        
             </tr>
         </tbody>
+
+        @empty
+        <p> No hay registros que mostrar en este momento <a href="/add"> Agregar Nota</a></p>
+        @endforelse
+
     </table>
     
 </div>

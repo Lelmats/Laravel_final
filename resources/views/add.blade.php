@@ -7,19 +7,19 @@
         <form method = "POST" action="{{ url('create') }}">
             @csrf
             <div class="mb-3">
-                <label for="" class="form-label">Código</label>
+                <label for="codigo" class="form-label">Código</label>
                 <input id="codigo" name="codigo" type="text" class="form-control" tabindex="1">    
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Descripción</label>
+                <label for="descripcion" class="form-label">Descripción</label>
                 <input id="descripcion" name="descripcion" type="text" class="form-control" tabindex="2">
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Cantidad</label>
+                <label for="cantidad" class="form-label">Cantidad</label>
                 <input id="cantidad" name="cantidad" type="number" class="form-control" tabindex="3">
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Precio</label>
+                <label for="precio" class="form-label">Precio</label>
                 <input id="precio" name="precio" type="number" step="any" value="0.00" class="form-control" tabindex="3">
             </div>
             <a href="" class="btn btn-secondary" tabindex="5">Cancelar</a>

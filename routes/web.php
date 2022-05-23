@@ -11,25 +11,15 @@
 |
 */
 
-Route::get('ex', function () {
-    return view('welcome');
-});
+Route::get('/', 'DatasController@index') -> name('datas.index');
 
-Route::get('/', function () {
-    // $datas = DB::table('datas') ->get();
-    return view('datas');
-}) -> name('list');
+Route::get('add', 'DatasController@add' )->name('datas.adding');
 
-Route::get('add', function () {
-    return view('add');
-})->name('adding');
+Route::post('create', 'DatasController@create')->name('datas.store');
 
-Route::get('edit', function () {
-    return view('edit');
-})->name('edition');
+Route::get('datas/{id}/edit', 'DatasController@edit')->name('datas.edit');
 
-// Route::get('/', function () {
-//     // $datas = DB::table('datas') ->get();
+Route::put('datas/{id}/edit', 'DatasController@update')->name('datas.update');
 
-//     return view('datas', ['datas' => $data]);
-// }) -> name('list');
+Route::delete('datas/{id}', 'DatasController@destroy')->name('datas.destroy');
+
