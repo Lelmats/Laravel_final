@@ -23,7 +23,7 @@
                 <label for="precio" class="form-label">Precio</label>
                 <input id="precio" name="precio" type="number" step="any" class="form-control" value="{{$datas->precio}}">
             </div>
-            <a href="" class="btn btn-secondary">Cancelar</a>
+            <a href="/" class="btn btn-secondary">Cancelar</a>
             <button type="submit" class="btn btn-primary">Guardar</button>
 
         </form>

@@ -23,7 +23,6 @@
                 <td>{{ $data->descripcion }}</td>
                 <td>{{ $data->cantidad }}</td>
                 <td>{{ $data->precio }}</td>
-                <th scope="col">Acciones</th>
                 <td>
                 <form method="POST" action="{{ url("datas/{$data->id}") }}" >
                 <a href="{{ route ('datas.edit', ['id' => $data->id]) }}" class="btn btn-info">Editar</a>   

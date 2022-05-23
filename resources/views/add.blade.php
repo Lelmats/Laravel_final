@@ -22,7 +22,7 @@
                 <label for="precio" class="form-label">Precio</label>
                 <input id="precio" name="precio" type="number" step="any" value="0.00" class="form-control" tabindex="3">
             </div>
-            <a href="" class="btn btn-secondary" tabindex="5">Cancelar</a>
+            <a href="/" class="btn btn-secondary" tabindex="5">Cancelar</a>
             <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
 
         </form>

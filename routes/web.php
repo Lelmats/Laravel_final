@@ -19,7 +19,7 @@ Route::post('create', 'DatasController@create')->name('datas.store');
 
 Route::get('datas/{id}/edit', 'DatasController@edit')->name('datas.edit');
 
-Route::put('datas/{id}/edit', 'DatasController@update')->name('datas.update');
+Route::put('datas/{datas}/edit', 'DatasController@update')->name('datas.update');
 
 Route::delete('datas/{id}', 'DatasController@destroy')->name('datas.destroy');
 
